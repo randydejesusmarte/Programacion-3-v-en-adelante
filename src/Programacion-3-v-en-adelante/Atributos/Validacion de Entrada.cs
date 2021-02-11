@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Programacion_3_v_en_adelante.Atributos
 {
     public class Validacion_de_Entrada : Attribute
     {
-        SqlConnection connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS; Initial Catalog = hidra; Integrated Security = True;");
-        public void login(string tabla,string campo1, TextBox usuario, string campo2,TextBox clave,Form menu)
+        private readonly SqlConnection connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS; Initial Catalog = hidra; Integrated Security = True;");
+
+        public void login(string tabla, string campo1, TextBox usuario, string campo2, TextBox clave, Form menu)
         {
             if (string.IsNullOrEmpty(usuario.Text) || string.IsNullOrEmpty(clave.Text))
             {
@@ -30,7 +31,8 @@ namespace Programacion_3_v_en_adelante.Atributos
                             break;
                     }
                     connection.Close();
-                }catch(Exception es)
+                }
+                catch (Exception es)
                 {
                     MessageBox.Show(es.Message);
                 }

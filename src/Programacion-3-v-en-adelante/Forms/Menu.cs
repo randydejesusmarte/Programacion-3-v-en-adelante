@@ -11,14 +11,16 @@ namespace Programacion_3_v_en_adelante
             InitializeComponent();
         }
 
-        menu FormH = new menu();
-        
+        private readonly menu FormH = new menu();
+
         private void Con_Us_Click(object sender, EventArgs e)
         {
-            FormH.Form_Heredado(new Consulta(),screen);
+            FormH.Form_Heredado(form: new Consulta(), panel: screen);
         }
 
-        private void salir_Click(object sender, EventArgs e) => Application.Exit();
-        
+        private void salir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
