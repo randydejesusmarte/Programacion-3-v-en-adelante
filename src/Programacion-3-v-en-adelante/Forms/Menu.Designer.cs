@@ -71,7 +71,7 @@ namespace Programacion_3_v_en_adelante
             this.salir.ShortcutKeys = System.Windows.Forms.Keys.F4;
             this.salir.Size = new System.Drawing.Size(41, 20);
             this.salir.Text = "Salir";
-            this.salir.Click += new System.EventHandler(this.salir_Click);
+            this.salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // screen
             // 

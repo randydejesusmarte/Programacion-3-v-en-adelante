@@ -18,7 +18,7 @@ namespace Programacion_3_v_en_adelante
             FormH.Form_Heredado(form: new Consulta(), panel: screen);
         }
 
-        private void salir_Click(object sender, EventArgs e)
+        private void Salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

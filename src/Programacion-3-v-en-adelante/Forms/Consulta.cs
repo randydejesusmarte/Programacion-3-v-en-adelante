@@ -8,12 +8,14 @@ namespace Programacion_3_v_en_adelante.Forms
         public Consulta()
         {
             InitializeComponent();
-            iniciar();
+            Iniciar();
         }
 
-        private void iniciar()
+        private void Iniciar()
         {
-            new DB().FillDB(sql: "select * from login", dataGridView: dataGridView1);
+            new DB().FillDB(
+                sql: "select * from login",
+                dataGridView: dataGridView1);
         }
     }
 }

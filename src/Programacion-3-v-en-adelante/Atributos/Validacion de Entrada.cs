@@ -8,9 +8,9 @@ namespace Programacion_3_v_en_adelante.Atributos
     {
         private readonly SqlConnection connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS; Initial Catalog = hidra; Integrated Security = True;");
 
-        public void login(string tabla, string campo1, TextBox usuario, string campo2, TextBox clave, Form menu)
+        public void login(string Tabla, string Campo1, TextBox Usuario, string Campo2, TextBox Clave, Form Menu)
         {
-            if (string.IsNullOrEmpty(usuario.Text) || string.IsNullOrEmpty(clave.Text))
+            if (string.IsNullOrEmpty(Usuario.Text) || string.IsNullOrEmpty(Clave.Text))
             {
                 MessageBox.Show("faltan ingresar el usuario u la contraceña");
             }
@@ -19,7 +19,7 @@ namespace Programacion_3_v_en_adelante.Atributos
                 try
                 {
                     connection.Open();
-                    SqlCommand command = new SqlCommand($"select count(*) from {tabla} where {campo1} = '{usuario.Text}' and {campo2} = '{clave.Text}'", connection);
+                    SqlCommand command = new SqlCommand($"select count(*) from {Tabla} where {Campo1} = '{Usuario.Text}' and {Campo2} = '{Clave.Text}'", connection);
                     int valor = int.Parse(command.ExecuteScalar().ToString());
                     switch (valor)
                     {
@@ -27,7 +27,7 @@ namespace Programacion_3_v_en_adelante.Atributos
                             MessageBox.Show("el usuario no existe");
                             break;
                         case 1:
-                            menu.Show();
+                            Menu.Show();
                             break;
                     }
                     connection.Close();

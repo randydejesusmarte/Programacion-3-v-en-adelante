@@ -80,7 +80,7 @@ namespace Programacion_3_v_en_adelante
             this.btentrar.TabIndex = 3;
             this.btentrar.Text = "Entrar";
             this.btentrar.UseVisualStyleBackColor = true;
-            this.btentrar.Click += new System.EventHandler(this.btentrar_Click);
+            this.btentrar.Click += new System.EventHandler(this.Btentrar_Click);
             // 
             // label1
             // 
