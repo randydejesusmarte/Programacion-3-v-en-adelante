@@ -35,6 +35,7 @@ namespace Programacion_3_v_en_adelante
             this.Con_Us = new System.Windows.Forms.ToolStripMenuItem();
             this.salir = new System.Windows.Forms.ToolStripMenuItem();
             this.screen = new System.Windows.Forms.Panel();
+            this.cerrarSeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@ namespace Programacion_3_v_en_adelante
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.consultasToolStripMenuItem,
+            this.cerrarSeccionToolStripMenuItem,
             this.salir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -56,7 +58,6 @@ namespace Programacion_3_v_en_adelante
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
-            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // Con_Us
             // 
@@ -69,7 +70,7 @@ namespace Programacion_3_v_en_adelante
             // salir
             // 
             this.salir.Name = "salir";
-            this.salir.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.salir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.salir.Size = new System.Drawing.Size(41, 20);
             this.salir.Text = "Salir";
             this.salir.Click += new System.EventHandler(this.Salir_Click);
@@ -81,6 +82,14 @@ namespace Programacion_3_v_en_adelante
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(804, 450);
             this.screen.TabIndex = 1;
+            // 
+            // cerrarSeccionToolStripMenuItem
+            // 
+            this.cerrarSeccionToolStripMenuItem.Name = "cerrarSeccionToolStripMenuItem";
+            this.cerrarSeccionToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F14;
+            this.cerrarSeccionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.cerrarSeccionToolStripMenuItem.Text = "Cerrar Seccion";
+            this.cerrarSeccionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeccionToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -108,5 +117,6 @@ namespace Programacion_3_v_en_adelante
         private System.Windows.Forms.ToolStripMenuItem Con_Us;
         private System.Windows.Forms.Panel screen;
         private System.Windows.Forms.ToolStripMenuItem salir;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSeccionToolStripMenuItem;
     }
 }

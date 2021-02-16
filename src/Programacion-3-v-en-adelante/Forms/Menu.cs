@@ -23,9 +23,9 @@ namespace Programacion_3_v_en_adelante
             Application.Exit();
         }
 
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cerrarSeccionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Restart();
         }
     }
 }
