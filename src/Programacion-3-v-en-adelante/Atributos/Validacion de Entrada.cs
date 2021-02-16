@@ -8,7 +8,7 @@ namespace Programacion_3_v_en_adelante.Atributos
     {
         private readonly SqlConnection connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS; Initial Catalog = hidra; Integrated Security = True;");
 
-        public void login(string Tabla, string Campo1, TextBox Usuario, string Campo2, TextBox Clave, Form Menu)
+        public void login(string Tabla, string Campo1, TextBox Usuario, string Campo2, TextBox Clave, Form Menu,Button button)
         {
             if (string.IsNullOrEmpty(Usuario.Text) || string.IsNullOrEmpty(Clave.Text))
             {
@@ -28,6 +28,7 @@ namespace Programacion_3_v_en_adelante.Atributos
                             break;
                         case 1:
                             Menu.Show();
+                            Usuario.Enabled = Clave.Enabled = button.Enabled = false;
                             break;
                     }
                     connection.Close();

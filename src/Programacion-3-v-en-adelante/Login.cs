@@ -15,14 +15,8 @@ namespace Programacion_3_v_en_adelante
 
         private void Btentrar_Click(object sender, EventArgs e)
         {
-            Entrada.login(
-                Tabla: "login",
-                Campo1: "uid",
-                Usuario: txtnombre,
-                Campo2: "pass",
-                Clave: txtclave,
-                Menu: new Menu());
-            Hide();
+            Entrada.login(Tabla: "login", Campo1: "uid", Usuario: txtnombre, Campo2: "pass", Clave: txtclave, Menu: new Menu(),btentrar);
+            //Hide();
         }
     }
 }
