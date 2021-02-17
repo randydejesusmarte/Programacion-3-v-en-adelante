@@ -27,10 +27,5 @@ namespace Programacion_3_v_en_adelante
         {
             Application.Restart();
         }
-
-        private void Menu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
     }
 }

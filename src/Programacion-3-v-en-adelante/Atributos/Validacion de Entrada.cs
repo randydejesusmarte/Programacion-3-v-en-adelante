@@ -27,10 +27,8 @@ namespace Programacion_3_v_en_adelante.Atributos
                             MessageBox.Show("el usuario no existe");
                             break;
                         case 1:
-                            Menu.ShowDialog();
+                            Menu.Show();
                             Usuario.Enabled = Clave.Enabled = button.Enabled = false;
-                            break;
-                        default:
                             break;
                     }
                     connection.Close();

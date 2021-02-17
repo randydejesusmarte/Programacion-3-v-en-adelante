@@ -33,9 +33,9 @@ namespace Programacion_3_v_en_adelante
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Con_Us = new System.Windows.Forms.ToolStripMenuItem();
-            this.cerrarSeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salir = new System.Windows.Forms.ToolStripMenuItem();
             this.screen = new System.Windows.Forms.Panel();
+            this.cerrarSeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +67,6 @@ namespace Programacion_3_v_en_adelante
             this.Con_Us.Text = "Registro de Usuario";
             this.Con_Us.Click += new System.EventHandler(this.Con_Us_Click);
             // 
-            // cerrarSeccionToolStripMenuItem
-            // 
-            this.cerrarSeccionToolStripMenuItem.Name = "cerrarSeccionToolStripMenuItem";
-            this.cerrarSeccionToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F14;
-            this.cerrarSeccionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.cerrarSeccionToolStripMenuItem.Text = "Cerrar Seccion";
-            this.cerrarSeccionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeccionToolStripMenuItem_Click);
-            // 
             // salir
             // 
             this.salir.Name = "salir";
@@ -91,6 +83,14 @@ namespace Programacion_3_v_en_adelante
             this.screen.Size = new System.Drawing.Size(804, 450);
             this.screen.TabIndex = 1;
             // 
+            // cerrarSeccionToolStripMenuItem
+            // 
+            this.cerrarSeccionToolStripMenuItem.Name = "cerrarSeccionToolStripMenuItem";
+            this.cerrarSeccionToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F14;
+            this.cerrarSeccionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.cerrarSeccionToolStripMenuItem.Text = "Cerrar Seccion";
+            this.cerrarSeccionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeccionToolStripMenuItem_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,7 +103,6 @@ namespace Programacion_3_v_en_adelante
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Menu_FormClosed);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
