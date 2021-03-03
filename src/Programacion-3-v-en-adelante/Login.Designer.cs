@@ -107,6 +107,7 @@ namespace Programacion_3_v_en_adelante
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(328, 394);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

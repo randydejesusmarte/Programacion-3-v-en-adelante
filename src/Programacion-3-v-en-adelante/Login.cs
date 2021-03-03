@@ -1,5 +1,7 @@
 ﻿using Programacion_3_v_en_adelante.Atributos;
 using System;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Programacion_3_v_en_adelante
@@ -15,7 +17,7 @@ namespace Programacion_3_v_en_adelante
 
         private void Btentrar_Click(object sender, EventArgs e)
         {
-            Entrada.login(Tabla: "login", Campo1: "uid", Usuario: txtnombre, Campo2: "pass", Clave: txtclave, Menu: new Menu(),btentrar);
+            Entrada.login(Tabla: "login", Campo1: "uid", Usuario: txtnombre, Campo2: "pass", Clave: txtclave, Menu: new Menu(), btentrar);
         }
     }
 }

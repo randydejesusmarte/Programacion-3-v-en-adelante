@@ -18,14 +18,19 @@ namespace Programacion_3_v_en_adelante
             FormH.Form_Heredado(form: new Consulta(), panel: screen);
         }
 
-        private void Salir_Click(object sender, EventArgs e)
+        private void cerrarSeccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void Menu_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
-        private void cerrarSeccionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void registrarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            FormH.Form_Heredado(new Clientes(), screen);
         }
     }
 }

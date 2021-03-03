@@ -33,18 +33,20 @@ namespace Programacion_3_v_en_adelante
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Con_Us = new System.Windows.Forms.ToolStripMenuItem();
-            this.salir = new System.Windows.Forms.ToolStripMenuItem();
-            this.screen = new System.Windows.Forms.Panel();
             this.cerrarSeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.screen = new System.Windows.Forms.Panel();
+            this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registroToolStripMenuItem,
             this.consultasToolStripMenuItem,
-            this.cerrarSeccionToolStripMenuItem,
-            this.salir});
+            this.cerrarSeccionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(804, 24);
@@ -67,29 +69,37 @@ namespace Programacion_3_v_en_adelante
             this.Con_Us.Text = "Registro de Usuario";
             this.Con_Us.Click += new System.EventHandler(this.Con_Us_Click);
             // 
-            // salir
+            // cerrarSeccionToolStripMenuItem
             // 
-            this.salir.Name = "salir";
-            this.salir.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.salir.Size = new System.Drawing.Size(41, 20);
-            this.salir.Text = "Salir";
-            this.salir.Click += new System.EventHandler(this.Salir_Click);
+            this.cerrarSeccionToolStripMenuItem.Name = "cerrarSeccionToolStripMenuItem";
+            this.cerrarSeccionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
+            this.cerrarSeccionToolStripMenuItem.Text = "Cerrar Seccion";
+            this.cerrarSeccionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeccionToolStripMenuItem_Click);
             // 
             // screen
             // 
+            this.screen.BackColor = System.Drawing.Color.White;
             this.screen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.screen.Location = new System.Drawing.Point(0, 24);
             this.screen.Name = "screen";
             this.screen.Size = new System.Drawing.Size(804, 450);
             this.screen.TabIndex = 1;
             // 
-            // cerrarSeccionToolStripMenuItem
+            // registroToolStripMenuItem
             // 
-            this.cerrarSeccionToolStripMenuItem.Name = "cerrarSeccionToolStripMenuItem";
-            this.cerrarSeccionToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F14;
-            this.cerrarSeccionToolStripMenuItem.Size = new System.Drawing.Size(95, 20);
-            this.cerrarSeccionToolStripMenuItem.Text = "Cerrar Seccion";
-            this.cerrarSeccionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSeccionToolStripMenuItem_Click);
+            this.registroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.registrarClienteToolStripMenuItem});
+            this.registroToolStripMenuItem.Name = "registroToolStripMenuItem";
+            this.registroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.registroToolStripMenuItem.Text = "Registro";
+            // 
+            // registrarClienteToolStripMenuItem
+            // 
+            this.registrarClienteToolStripMenuItem.Name = "registrarClienteToolStripMenuItem";
+            this.registrarClienteToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
+            this.registrarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.registrarClienteToolStripMenuItem.Text = "Registrar Cliente";
+            this.registrarClienteToolStripMenuItem.Click += new System.EventHandler(this.registrarClienteToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -103,6 +113,7 @@ namespace Programacion_3_v_en_adelante
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -116,7 +127,8 @@ namespace Programacion_3_v_en_adelante
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem Con_Us;
         private System.Windows.Forms.Panel screen;
-        private System.Windows.Forms.ToolStripMenuItem salir;
         private System.Windows.Forms.ToolStripMenuItem cerrarSeccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registrarClienteToolStripMenuItem;
     }
 }

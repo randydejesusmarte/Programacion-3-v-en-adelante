@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Programacion_3_v_en_adelante.Atributos
 {
-    public class DB : Attribute
+    internal class DB : Attribute
     {
-        private readonly SqlConnection Connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS;  Initial Catalog = hidra; Integrated Security = True;");
+        private readonly Conexion Connection = new Conexion();
 
         public void FillDB(string sql, DataGridView dataGridView)
         {
@@ -17,15 +18,15 @@ namespace Programacion_3_v_en_adelante.Atributos
                 Connection.Open();
                 SqlDataAdapter sqlData = new SqlDataAdapter();
                 DataTable dataTable = new DataTable();
-                sqlData.SelectCommand = new SqlCommand(sql, Connection);
+                sqlData.SelectCommand = new SqlCommand(sql, Connection.SqlConnectio);
                 sqlData.Fill(dataTable);
                 dataGridView.DataSource = dataTable;
-                Connection.Close();
+                Connection.SqlConnectio.Close();
             }
             catch (Exception es)
             {
                 MessageBox.Show(es.Message);
-                Connection.Close();
+                Connection.SqlConnectio.Close();
             }
         }
     }

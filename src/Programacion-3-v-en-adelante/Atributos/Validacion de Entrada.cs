@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Programacion_3_v_en_adelante.Atributos
 {
-    public class Validacion_de_Entrada : Attribute
+    internal class Validacion_de_Entrada : Attribute
     {
-        private readonly SqlConnection connection = new SqlConnection("Data Source = RANDY\\SQLEXPRESS; Initial Catalog = hidra; Integrated Security = True;");
-
-        public void login(string Tabla, string Campo1, TextBox Usuario, string Campo2, TextBox Clave, Form Menu,Button button)
+        private readonly Conexion Confi = new Conexion();
+        
+        internal void login(string Tabla, string Campo1, TextBox Usuario, string Campo2, TextBox Clave, Form Menu,Button button)
         {
             if (string.IsNullOrEmpty(Usuario.Text) || string.IsNullOrEmpty(Clave.Text))
             {
@@ -18,8 +18,8 @@ namespace Programacion_3_v_en_adelante.Atributos
             {
                 try
                 {
-                    connection.Open();
-                    SqlCommand command = new SqlCommand($"select count(*) from {Tabla} where {Campo1} = '{Usuario.Text}' and {Campo2} = '{Clave.Text}'", connection);
+                    Confi.Open();
+                    SqlCommand command = new SqlCommand($"select count(*) from {Tabla} where {Campo1} = '{Usuario.Text}' and {Campo2} = '{Clave.Text}'", Confi.SqlConnectio);
                     int valor = int.Parse(command.ExecuteScalar().ToString());
                     switch (valor)
                     {
@@ -34,11 +34,12 @@ namespace Programacion_3_v_en_adelante.Atributos
                             MessageBox.Show("el usuario no existe");
                             break;
                     }
-                    connection.Close();
+                    Confi.Close();
                 }
                 catch (Exception es)
                 {
                     MessageBox.Show(es.Message);
+                    Confi.Close();
                 }
             }
 
