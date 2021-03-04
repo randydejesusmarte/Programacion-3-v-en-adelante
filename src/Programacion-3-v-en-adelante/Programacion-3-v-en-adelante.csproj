@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Atributos\Codigo_Cliente\Actualizar_Cliente.cs" />
     <Compile Include="Atributos\Codigo_Cliente\Listar_Clientes.cs" />
+    <Compile Include="Atributos\Codigo_Login\Login_conect.cs" />
     <Compile Include="Atributos\Conexion.cs" />
     <Compile Include="Atributos\DB.cs" />
     <Compile Include="Atributos\Codigo_Cliente\Insertar_Cliente.cs" />

@@ -7,7 +7,7 @@ namespace Programacion_3_v_en_adelante.Atributos
     internal class Conexion
     {
         internal SqlConnection SqlConnectio = new SqlConnection();
-        string cadena = ConfigurationManager.ConnectionStrings["Properties.Settings.Conecctionstring"].ConnectionString;
+        internal string cadena = ConfigurationManager.ConnectionStrings["Properties.Settings.Conecctionstring"].ConnectionString;
 
         internal Conexion()
         {

@@ -9,7 +9,7 @@ namespace Programacion_3_v_en_adelante.Atributos.Codigo_Cliente
     {
         private readonly Conexion conexion = new Conexion();
         private readonly SqlCommand command = new SqlCommand();
-        DataTable datos = new DataTable();
+        private readonly DataTable datos = new DataTable();
         internal DataTable Mostrar_Clientes()
         {
                 command.Connection = conexion.Open();

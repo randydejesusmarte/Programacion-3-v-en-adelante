@@ -1,6 +1,8 @@
 ﻿using Programacion_3_v_en_adelante.Atributos;
+using Programacion_3_v_en_adelante.Atributos.Codigo_Login;
 using System;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 
@@ -13,11 +15,22 @@ namespace Programacion_3_v_en_adelante
             InitializeComponent();
         }
 
-        private readonly Validacion_de_Entrada Entrada = new Validacion_de_Entrada();
+        private Login_conect login = new Login_conect();
 
         private void Btentrar_Click(object sender, EventArgs e)
         {
-            Entrada.login(Tabla: "login", Campo1: "uid", Usuario: txtnombre, Campo2: "pass", Clave: txtclave, Menu: new Menu(), btentrar);
+
+            int result = login.Logear(txtnombre.Text, txtclave.Text);
+            if (result == 1)
+            {
+                new Menu().Show();
+                Hide();
+
+            }
+            else if (result == 0)
+            {
+                MessageBox.Show("Contraseña o Usuario son incorrecto");
+            }
         }
     }
 }
