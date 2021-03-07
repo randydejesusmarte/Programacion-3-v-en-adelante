@@ -16,14 +16,18 @@ namespace Programacion_3_v_en_adelante.Atributos
         public SqlConnection Open()
         {
             if (SqlConnectio.State == ConnectionState.Closed)
-                SqlConnectio.Open();
+            { 
+                SqlConnectio.Open(); 
+            }
             return SqlConnectio;
         }
 
         public SqlConnection Close()
         {
             if (SqlConnectio.State == ConnectionState.Open)
-                SqlConnectio.Close();
+            {
+                SqlConnectio.Close(); 
+            }
             return SqlConnectio;
         }
     }

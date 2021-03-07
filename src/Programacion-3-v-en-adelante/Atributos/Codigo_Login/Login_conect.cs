@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Programacion_3_v_en_adelante.Atributos.Codigo_Login
 {
-    internal class Login_conect
+    internal class Login_conect : Attribute
     {
-        private Conexion conexion = new Conexion();
+        private readonly Conexion conexion = new Conexion();
         internal int Logear(string Nombre, string Contraceña)
         {
             try

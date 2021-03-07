@@ -14,18 +14,14 @@ namespace Programacion_3_v_en_adelante
         {
             InitializeComponent();
         }
-
-        private Login_conect login = new Login_conect();
-
+        private readonly Login_conect login = new Login_conect();
         private void Btentrar_Click(object sender, EventArgs e)
         {
-
             int result = login.Logear(txtnombre.Text, txtclave.Text);
             if (result == 1)
             {
                 new Menu().Show();
                 Hide();
-
             }
             else if (result == 0)
             {
